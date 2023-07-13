@@ -33,7 +33,10 @@ input
     -webkit-appearance: none
     border-radius: 0
 
-$siteWidth: 800px
+.wrap
+    box-shadow: 0 0 10px rgba(0,0,0,.5)
+    width: 800px
+    margin: 0 auto
 
 html
     background-image: url('img/cokesign.gif')
@@ -41,7 +44,7 @@ html
     header
         margin: 0 auto 0
         background-color: white
-        width: $siteWidth
+        width: 100%
         text-align: center
         img
             margin: 0 auto
@@ -50,8 +53,7 @@ html
             &::-webkit-media-controls-panel
                 background-color: white
     .content
-        width: $siteWidth
-        margin: 0 auto
+        width: 100%
         display: flex
         .sidebar
             width: 120px
@@ -62,15 +64,21 @@ html
                 width: 100%
         main
             background-color: rgba(255, 255, 255, .9)
-            width: 680px
+            width: calc(100% - 120px)
             padding: 0 1em
             img
                 max-width: 100%
             .news
                 text-align: center
                 iframe
-                    padding-bottom: 1em
-                    border-bottom: 2px solid red
+                    padding-bottom: .5em
+                a
+                    display: block
+                    font-weight: bold
+                    text-transform: uppercase
+                    color: red
+                    &:visited
+                        color: red
                 .info
                     width: 100%
                     display: flex

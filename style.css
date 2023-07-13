@@ -41,6 +41,12 @@ input {
   border-radius: 0;
 }
 
+.wrap {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 800px;
+  margin: 0 auto;
+}
+
 html {
   background-image: url("img/cokesign.gif");
   cursor: url(img/mouse.png), auto;
@@ -48,7 +54,7 @@ html {
 html header {
   margin: 0 auto 0;
   background-color: white;
-  width: 800px;
+  width: 100%;
   text-align: center;
 }
 html header img {
@@ -61,8 +67,7 @@ html header audio::-webkit-media-controls-panel {
   background-color: white;
 }
 html .content {
-  width: 800px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
 }
 html .content .sidebar {
@@ -76,7 +81,7 @@ html .content .sidebar img {
 }
 html .content main {
   background-color: rgba(255, 255, 255, 0.9);
-  width: 680px;
+  width: calc(100% - 120px);
   padding: 0 1em;
 }
 html .content main img {
@@ -86,8 +91,16 @@ html .content main .news {
   text-align: center;
 }
 html .content main .news iframe {
-  padding-bottom: 1em;
-  border-bottom: 2px solid red;
+  padding-bottom: 0.5em;
+}
+html .content main .news a {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red;
+}
+html .content main .news a:visited {
+  color: red;
 }
 html .content main .news .info {
   width: 100%;
