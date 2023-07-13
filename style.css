@@ -133,14 +133,15 @@ ol {
   padding-bottom: 1rem;
 }
 
-.chat {
-  padding: 0 1em;
-}
 .chat b {
   font-weight: bold;
 }
 .chat .info {
+  padding: 0 1em;
   padding-bottom: 1em;
+}
+.chat iframe {
+  padding: 0 1em;
 }
 
 .rankings .info {
