@@ -21,6 +21,7 @@
           const src =
             Math.random() < 0.5 ? "audio/6pence.mp3" : "audio/coke.mp3";
           audioSource.src = src;
+          audioSource.parentElement.load();
           let playAttempt = setInterval(() => {
             audioSource.parentElement
               .play()
