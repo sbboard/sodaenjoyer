@@ -14,8 +14,26 @@
           src="img/cooltext439119090297206.gif"
         /><br />
         <audio controls autoplay loop>
-          <source src="audio/coke.mp3" type="audio/mpeg" />
+          <source type="audio/mpeg" />
         </audio>
+        <script>
+          const audioSource = document.querySelector("audio source");
+          const src =
+            Math.random() < 0.5 ? "audio/6pence.mp3" : "audio/coke.mp3";
+          audioSource.src = src;
+          let playAttempt = setInterval(() => {
+            audioSource.parentElement
+              .play()
+              .then(() => {
+                clearInterval(playAttempt);
+              })
+              .catch((error) => {
+                console.log(
+                  "Unable to play the video, User has not interacted yet."
+                );
+              });
+          }, 3000);
+        </script>
       </header>
       <div class="content">
         <div class="sidebar">
