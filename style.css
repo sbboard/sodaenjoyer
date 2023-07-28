@@ -122,6 +122,9 @@ html footer {
   flex-wrap: wrap;
   justify-content: center;
 }
+html footer a {
+  display: inherit;
+}
 html footer img {
   height: 60px;
 }
